@@ -6,7 +6,7 @@
   --soft-grey: #a2a2a2;
   --red: #d42121;
 
-  --header-height: 124px;
+  --header-height: 126px;
   --sidebar-width: 230px;
   --content-width: 1320px;
 }
@@ -53,7 +53,7 @@ button {
 
 .site-logo {
   position: absolute;
-  top: 18px;
+  top: 16px;
   left: 50%;
   width: 430px;
   transform: translateX(-50%);
@@ -75,15 +75,14 @@ button {
 }
 
 .site-logo-japanese {
-  width: 100%;
-  margin-top: 9px;
+  margin-top: 8px;
   color: var(--red);
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 500;
   line-height: 1;
-  letter-spacing: 0.34em;
+  letter-spacing: 0.22em;
   text-align: center;
-  text-indent: 0.34em;
+  text-indent: 0.22em;
 }
 
 .header-controls {
@@ -226,10 +225,6 @@ button {
   font-weight: 400;
   line-height: 1.45;
   letter-spacing: -0.025em;
-}
-
-.intro-main strong {
-  font-weight: 600;
 }
 
 .intro-sub {
@@ -377,34 +372,35 @@ button {
 
 @media (max-width: 760px) {
   :root {
-    --header-height: 94px;
+    --header-height: 98px;
   }
 
   .site-logo {
-    top: 50%;
+    top: 57%;
     left: 20px;
     width: 165px;
     transform: translateY(-50%);
-    align-items: flex-start;
+    align-items: center;
   }
 
   .site-logo-main {
+    width: 100%;
     font-size: 25px;
     font-weight: 600;
     line-height: 1;
     letter-spacing: 0.1em;
-    text-align: left;
-    text-indent: 0;
+    text-align: center;
+    text-indent: 0.1em;
   }
 
   .site-logo-japanese {
-    margin-top: 6px;
-    font-size: 13px;
+    margin-top: 7px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 1;
-    letter-spacing: 0.25em;
-    text-align: left;
-    text-indent: 0;
+    letter-spacing: 0.2em;
+    text-align: center;
+    text-indent: 0.2em;
   }
 
   .header-controls {
