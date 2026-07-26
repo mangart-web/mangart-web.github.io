@@ -8,7 +8,7 @@
 
   --header-height: 92px;
   --sidebar-width: 250px;
-  --content-width: 1260px;
+  --content-width: 1320px;
 }
 
 * {
@@ -155,34 +155,34 @@ button {
 
 .intro-title {
   margin: 0 0 32px;
-  font-size: clamp(64px, 6.5vw, 104px);
+  font-size: 58px;
   font-weight: 800;
-  line-height: 0.95;
-  letter-spacing: -0.055em;
+  line-height: 1;
+  letter-spacing: -0.045em;
 }
 
 .intro-lead {
   margin: 0 0 12px;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 500;
   line-height: 1.4;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.02em;
 }
 
 .intro-main {
   max-width: 850px;
-  margin: 0 0 30px;
-  font-size: 28px;
+  margin: 0 0 28px;
+  font-size: 24px;
   font-weight: 400;
   line-height: 1.45;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.02em;
 }
 
 .intro-sub {
   max-width: 760px;
   margin: 0;
   color: var(--grey);
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 400;
   line-height: 1.55;
 }
@@ -264,7 +264,7 @@ button {
 
 /* TABLET */
 
-@media (max-width: 1100px) {
+@media (max-width: 900px) {
   :root {
     --sidebar-width: 205px;
   }
@@ -276,10 +276,6 @@ button {
   .page {
     padding-right: 34px;
     padding-left: 34px;
-  }
-
-  .intro-title {
-    font-size: clamp(58px, 7vw, 84px);
   }
 
   .works-grid {
@@ -355,7 +351,7 @@ button {
 
   .intro-title {
     margin-bottom: 27px;
-    font-size: clamp(50px, 16vw, 76px);
+    font-size: 50px;
     line-height: 0.95;
   }
 
