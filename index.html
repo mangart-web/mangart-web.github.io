@@ -21,24 +21,28 @@
 
   <header class="site-header">
 
-    <button
-      class="menu-button"
-      id="menuButton"
-      type="button"
-      aria-label="Menü öffnen"
-      aria-expanded="false"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
     <a class="site-title" href="index.html">mangart</a>
 
-    <div class="language-switch">
-      <button class="language-button active" type="button">DE</button>
-      <span class="language-divider">–</span>
-      <button class="language-button" type="button">EN</button>
+    <div class="header-controls">
+
+      <div class="language-switch">
+        <button class="language-button active" type="button">DE</button>
+        <span class="language-divider">–</span>
+        <button class="language-button" type="button">EN</button>
+      </div>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-label="Menü öffnen"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
     </div>
 
   </header>
@@ -55,6 +59,12 @@
       <a href="#">Contact</a>
     </nav>
 
+    <div class="sidebar-footer">
+      <div class="japanese-name">バッドマン</div>
+      <div>© 2026 mangart</div>
+      <div>Bruce Payne</div>
+    </div>
+
   </aside>
 
   <main class="page">
@@ -63,61 +73,64 @@
 
       <section class="intro">
 
-        <h1 class="intro-title">
-          MANGART
-        </h1>
-
         <p class="intro-lead">
           Manga ist meine künstlerische Sprache.
         </p>
 
         <p class="intro-main">
-          Mangart ist eine zeitgenössische Kunstpraxis, die mit den visuellen
-          Möglichkeiten von Manga arbeitet.
+          <strong>mangart</strong> ist eine zeitgenössische Kunstpraxis,
+          die mit den visuellen Möglichkeiten von <strong>manga</strong> arbeitet.
         </p>
 
         <p class="intro-sub">
-          Die folgenden Arbeiten geben Einblick in diese fortlaufende
-          Auseinandersetzung.
+          Die folgenden Arbeiten geben Einblick in eine fortlaufende
+          Auseinandersetzung mit Fragen, Erinnerungen und Beobachtungen,
+          die ihren Platz nicht freiwillig freigeben.
         </p>
 
       </section>
 
       <section class="selected-works">
 
-        <h2 class="section-title">Ausgewählte Arbeiten</h2>
+        <h2 class="section-title">
+          <span>Ausgewählte Arbeiten</span>
+        </h2>
 
         <div class="works-grid">
 
-          <article class="work-card">
+          <a class="work-card" href="#">
             <div class="image-placeholder">Bild 01 folgt</div>
-          </article>
+          </a>
 
-          <article class="work-card">
+          <a class="work-card" href="#">
             <div class="image-placeholder">Bild 02 folgt</div>
-          </article>
+          </a>
 
-          <article class="work-card">
+          <a class="work-card" href="#">
             <div class="image-placeholder">Bild 03 folgt</div>
-          </article>
+          </a>
 
-          <article class="work-card">
+          <a class="work-card" href="#">
             <div class="image-placeholder">Bild 04 folgt</div>
-          </article>
+          </a>
 
-          <article class="work-card">
+          <a class="work-card" href="#">
             <div class="image-placeholder">Bild 05 folgt</div>
-          </article>
+          </a>
 
-          <article class="work-card">
+          <a class="work-card" href="#">
             <div class="image-placeholder">Bild 06 folgt</div>
-          </article>
+          </a>
 
-          <article class="work-card">
+          <a class="work-card" href="#">
             <div class="image-placeholder">Bild 07 folgt</div>
-          </article>
+          </a>
 
         </div>
+
+        <a class="all-works-link" href="#">
+          Alle Werke ansehen
+        </a>
 
       </section>
 
@@ -125,7 +138,21 @@
 
   </main>
 
-  <script src="script.js"></script>
+  <script>
+    const menuButton = document.getElementById("menuButton");
+    const sidebar = document.getElementById("sidebar");
+
+    menuButton.addEventListener("click", function () {
+      const menuIsOpen = sidebar.classList.toggle("open");
+
+      menuButton.classList.toggle("open", menuIsOpen);
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        menuIsOpen ? "true" : "false"
+      );
+    });
+  </script>
 
 </body>
 </html>
