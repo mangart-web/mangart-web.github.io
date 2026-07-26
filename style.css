@@ -6,7 +6,7 @@
   --soft-grey: #a2a2a2;
   --red: #d42121;
 
-  --header-height: 92px;
+  --header-height: 104px;
   --sidebar-width: 230px;
   --content-width: 1320px;
 }
@@ -51,14 +51,15 @@ button {
 
 .site-title {
   position: absolute;
-  top: 23px;
+  top: 26px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 40px;
+  font-size: 46px;
   font-weight: 800;
   line-height: 1;
-  letter-spacing: -1.8px;
+  letter-spacing: 0.035em;
   text-transform: lowercase;
+  white-space: nowrap;
 }
 
 .header-controls {
@@ -360,7 +361,7 @@ button {
     left: 22px;
     transform: none;
     font-size: 29px;
-    letter-spacing: -1.2px;
+    letter-spacing: -0.02em;
   }
 
   .header-controls {
