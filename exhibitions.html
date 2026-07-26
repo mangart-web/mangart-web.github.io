@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Exhibitions | MANGART</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+
+    <a
+      class="site-logo"
+      href="index.html"
+      aria-label="Zur Startseite"
+      data-aria-de="Zur Startseite"
+      data-aria-en="Go to homepage"
+    >
+      <span class="site-logo-main">MANGART</span>
+      <span class="site-logo-japanese">マンガアート</span>
+    </a>
+
+    <div class="header-controls">
+
+      <div class="language-switch" aria-label="Sprache auswählen">
+        <button
+          class="language-button active"
+          id="languageDe"
+          type="button"
+          aria-pressed="true"
+        >
+          DE
+        </button>
+
+        <span class="language-divider">|</span>
+
+        <button
+          class="language-button"
+          id="languageEn"
+          type="button"
+          aria-pressed="false"
+        >
+          EN
+        </button>
+      </div>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-label="Menü öffnen"
+        aria-expanded="false"
+        data-open-de="Menü öffnen"
+        data-close-de="Menü schließen"
+        data-open-en="Open menu"
+        data-close-en="Close menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+  </header>
+
+  <aside class="sidebar" id="sidebar">
+
+    <nav class="main-navigation">
+
+      <a
+        href="index.html"
+        data-de="Home"
+        data-en="Home"
+      >
+        Home
+      </a>
+
+      <a
+        href="#"
+        data-de="Werke"
+        data-en="Works"
+      >
+        Werke
+      </a>
+
+      <a
+        href="#"
+        data-de="Position"
+        data-en="Position"
+      >
+        Position
+      </a>
+
+      <a
+        href="#"
+        data-de="Über mich"
+        data-en="About"
+      >
+        Über mich
+      </a>
+
+      <a
+        class="active"
+        href="exhibitions.html"
+        data-de="Ausstellungen"
+        data-en="Exhibitions"
+      >
+        Ausstellungen
+      </a>
+
+      <a
+        href="press.html"
+        data-de="Presse"
+        data-en="Press"
+      >
+        Presse
+      </a>
+
+      <a
+        href="#"
+        data-de="Kontakt"
+        data-en="Contact"
+      >
+        Kontakt
+      </a>
+
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="japanese-name">バッドマン</div>
+      <div>© 2026 mangart</div>
+      <div>Bruce Payne</div>
+    </div>
+
+  </aside>
+
+  <main class="page">
+
+    <div class="content">
+
+      <section class="intro">
+
+        <h1
+          class="intro-lead"
+          style="margin-top: 0;"
+          data-de="Ausstellungen"
+          data-en="Exhibitions"
+        >
+          Ausstellungen
+        </h1>
+
+        <p
+          class="intro-sub"
+          data-de="Derzeit sind keine Ausstellungen angekündigt."
+          data-en="No exhibitions are currently announced."
+        >
+          Derzeit sind keine Ausstellungen angekündigt.
+        </p>
+
+        <p
+          class="intro-sub"
+          data-de="Informationen zu kommenden Präsentationen werden hier veröffentlicht."
+          data-en="Information about upcoming presentations will be published here."
+        >
+          Informationen zu kommenden Präsentationen werden hier veröffentlicht.
+        </p>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <script>
+    const menuButton = document.getElementById("menuButton");
+    const sidebar = document.getElementById("sidebar");
+
+    const languageDe = document.getElementById("languageDe");
+    const languageEn = document.getElementById("languageEn");
+
+    const translatableElements = document.querySelectorAll(
+      "[data-de][data-en]"
+    );
+
+    const ariaTranslatableElements = document.querySelectorAll(
+      "[data-aria-de][data-aria-en]"
+    );
+
+    let currentLanguage =
+      localStorage.getItem("mangart-language") || "de";
+
+    function updateMenuLabel() {
+      const menuIsOpen = sidebar.classList.contains("open");
+
+      const labelAttribute = menuIsOpen
+        ? `data-close-${currentLanguage}`
+        : `data-open-${currentLanguage}`;
+
+      menuButton.setAttribute(
+        "aria-label",
+        menuButton.getAttribute(labelAttribute)
+      );
+    }
+
+    function setLanguage(language) {
+      currentLanguage = language;
+
+      document.documentElement.lang = language;
+
+      translatableElements.forEach(function (element) {
+        element.textContent = element.getAttribute(`data-${language}`);
+      });
+
+      ariaTranslatableElements.forEach(function (element) {
+        element.setAttribute(
+          "aria-label",
+          element.getAttribute(`data-aria-${language}`)
+        );
+      });
+
+      const germanIsActive = language === "de";
+
+      languageDe.classList.toggle("active", germanIsActive);
+      languageEn.classList.toggle("active", !germanIsActive);
+
+      languageDe.setAttribute(
+        "aria-pressed",
+        germanIsActive ? "true" : "false"
+      );
+
+      languageEn.setAttribute(
+        "aria-pressed",
+        germanIsActive ? "false" : "true"
+      );
+
+      localStorage.setItem("mangart-language", language);
+
+      updateMenuLabel();
+    }
+
+    languageDe.addEventListener("click", function () {
+      setLanguage("de");
+    });
+
+    languageEn.addEventListener("click", function () {
+      setLanguage("en");
+    });
+
+    menuButton.addEventListener("click", function () {
+      const menuIsOpen = sidebar.classList.toggle("open");
+
+      menuButton.classList.toggle("open", menuIsOpen);
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        menuIsOpen ? "true" : "false"
+      );
+
+      updateMenuLabel();
+    });
+
+    setLanguage(currentLanguage);
+  </script>
+
+</body>
+</html>
