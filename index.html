@@ -3,10 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>mangart</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>MANGART TEST</h1>
-  <p>Die Homepage funktioniert.</p>
+
+  <header class="site-header">
+
+    <button
+      class="menu-button"
+      id="menuButton"
+      type="button"
+      aria-label="Menü öffnen"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <a class="site-title" href="index.html">mangart</a>
+
+    <div class="language-switch">
+      <button class="language-button active" type="button">DE</button>
+      <span class="language-divider">–</span>
+      <button class="language-button" type="button">EN</button>
+    </div>
+
+  </header>
+
+  <aside class="sidebar" id="sidebar">
+
+    <nav class="main-navigation">
+      <a class="active" href="index.html">Home</a>
+      <a href="#">Works</a>
+      <a href="#">Position</a>
+      <a href="#">About</a>
+      <a href="#">Exhibitions</a>
+      <a href="#">Press</a>
+      <a href="#">Contact</a>
+    </nav>
+
+  </aside>
+
+  <main class="page">
+
+    <div class="content">
+
+      <section class="intro">
+
+        <p class="intro-text">
+          mangart ist eine zeitgenössische kunstpraxis, die mit den visuellen
+          möglichkeiten von manga arbeitet.
+        </p>
+
+      </section>
+
+      <section class="selected-works">
+
+        <h2 class="section-title">Ausgewählte Arbeiten</h2>
+
+        <div class="works-grid">
+
+          <article class="work-card">
+            <div class="image-placeholder">Bild 01 folgt</div>
+          </article>
+
+          <article class="work-card">
+            <div class="image-placeholder">Bild 02 folgt</div>
+          </article>
+
+          <article class="work-card">
+            <div class="image-placeholder">Bild 03 folgt</div>
+          </article>
+
+          <article class="work-card">
+            <div class="image-placeholder">Bild 04 folgt</div>
+          </article>
+
+          <article class="work-card">
+            <div class="image-placeholder">Bild 05 folgt</div>
+          </article>
+
+          <article class="work-card">
+            <div class="image-placeholder">Bild 06 folgt</div>
+          </article>
+
+          <article class="work-card">
+            <div class="image-placeholder">Bild 07 folgt</div>
+          </article>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
