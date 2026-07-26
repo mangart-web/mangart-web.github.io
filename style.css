@@ -64,6 +64,7 @@ button {
 }
 
 .site-logo-main {
+  display: block;
   width: 100%;
   color: var(--black);
   font-size: 50px;
@@ -75,6 +76,8 @@ button {
 }
 
 .site-logo-japanese {
+  display: block;
+  width: 100%;
   margin-top: 8px;
   color: var(--red);
   font-size: 30px;
@@ -376,14 +379,17 @@ button {
   }
 
   .site-logo {
-    top: 57%;
-    left: 20px;
-    width: 165px;
+    top: 50%;
+    left: 18px;
+    width: 174px;
     transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
     align-items: center;
   }
 
   .site-logo-main {
+    display: block;
     width: 100%;
     font-size: 25px;
     font-weight: 600;
@@ -394,6 +400,8 @@ button {
   }
 
   .site-logo-japanese {
+    display: block;
+    width: 100%;
     margin-top: 7px;
     font-size: 14px;
     font-weight: 500;
@@ -405,9 +413,9 @@ button {
 
   .header-controls {
     top: 0;
-    right: 18px;
+    right: 16px;
     height: var(--header-height);
-    gap: 16px;
+    gap: 14px;
   }
 
   .language-switch {
