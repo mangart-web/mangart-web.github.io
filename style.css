@@ -1,14 +1,14 @@
 :root {
   --white: #ffffff;
   --black: #111111;
-  --grey: #737373;
-  --light-grey: #e5e5e5;
+  --grey: #707070;
+  --light-grey: #e4e4e4;
   --placeholder: #f3f3f3;
-  --red: #d92323;
+  --red: #d72626;
 
-  --header-height: 110px;
-  --sidebar-width: 230px;
-  --content-width: 1280px;
+  --header-height: 92px;
+  --sidebar-width: 250px;
+  --content-width: 1260px;
 }
 
 * {
@@ -51,18 +51,18 @@ button {
 
 .site-title {
   position: absolute;
-  top: 34px;
+  top: 29px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 34px;
+  font-size: 27px;
   font-weight: 800;
-  letter-spacing: -1.5px;
+  letter-spacing: -1px;
   text-transform: lowercase;
 }
 
 .language-switch {
   position: absolute;
-  top: 43px;
+  top: 35px;
   right: 42px;
   display: flex;
   align-items: center;
@@ -95,7 +95,7 @@ button {
   bottom: 0;
   left: 0;
   width: var(--sidebar-width);
-  padding: 54px 34px;
+  padding: 56px 40px;
   background: var(--white);
   border-right: 1px solid var(--light-grey);
   z-index: 900;
@@ -105,14 +105,14 @@ button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
+  gap: 21px;
 }
 
 .main-navigation a {
   position: relative;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.045em;
   text-transform: uppercase;
 }
 
@@ -136,32 +136,58 @@ button {
 
 .page {
   margin-left: var(--sidebar-width);
-  padding: var(--header-height) 48px 90px;
+  padding: var(--header-height) 54px 100px;
 }
 
 .content {
   width: 100%;
   max-width: var(--content-width);
   margin: 0 auto;
-  padding-top: 82px;
+  padding-top: 54px;
 }
 
-/* INTRO */
+/* HOME INTRO */
 
 .intro {
-  max-width: 980px;
-  margin-bottom: 120px;
+  max-width: 900px;
+  margin-bottom: 105px;
 }
 
-.intro-text {
-  margin: 0;
-  font-size: clamp(42px, 5.3vw, 82px);
+.intro-title {
+  margin: 0 0 32px;
+  font-size: clamp(64px, 6.5vw, 104px);
   font-weight: 800;
-  line-height: 1.02;
+  line-height: 0.95;
   letter-spacing: -0.055em;
 }
 
-/* SELECTED WORKS */
+.intro-lead {
+  margin: 0 0 12px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.025em;
+}
+
+.intro-main {
+  max-width: 850px;
+  margin: 0 0 30px;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: -0.025em;
+}
+
+.intro-sub {
+  max-width: 760px;
+  margin: 0;
+  color: var(--grey);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+/* AUSGEWÄHLTE ARBEITEN */
 
 .selected-works {
   width: 100%;
@@ -171,11 +197,11 @@ button {
   display: flex;
   align-items: center;
   gap: 22px;
-  margin: 0 0 42px;
-  color: #a4a4a4;
-  font-size: 15px;
+  margin: 0 0 32px;
+  color: #a0a0a0;
+  font-size: 14px;
   font-weight: 700;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
 }
 
@@ -186,12 +212,12 @@ button {
   background: var(--light-grey);
 }
 
-/* GRID */
+/* BILDER */
 
 .works-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 70px 42px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 52px 24px;
 }
 
 .work-card {
@@ -207,22 +233,22 @@ button {
   background: var(--placeholder);
   border: 1px solid var(--light-grey);
   color: #999999;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
-/* MOBILE MENU BUTTON */
+/* HAMBURGER */
 
 .menu-button {
   display: none;
   position: absolute;
-  top: 32px;
-  left: 22px;
+  top: 25px;
+  right: 20px;
   width: 38px;
   height: 38px;
-  padding: 7px;
+  padding: 7px 4px;
   border: 0;
   background: transparent;
   cursor: pointer;
@@ -232,40 +258,41 @@ button {
   display: block;
   width: 100%;
   height: 2px;
-  margin: 5px 0;
+  margin: 6px 0;
   background: var(--black);
 }
 
 /* TABLET */
 
-@media (max-width: 1050px) {
+@media (max-width: 1100px) {
   :root {
-    --sidebar-width: 195px;
+    --sidebar-width: 205px;
   }
 
   .sidebar {
-    padding: 48px 25px;
+    padding: 50px 28px;
   }
 
   .page {
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: 34px;
+    padding-left: 34px;
+  }
+
+  .intro-title {
+    font-size: clamp(58px, 7vw, 84px);
   }
 
   .works-grid {
-    gap: 50px 26px;
-  }
-
-  .intro-text {
-    font-size: clamp(38px, 5.7vw, 68px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 42px 24px;
   }
 }
 
-/* MOBILE */
+/* HANDY */
 
 @media (max-width: 760px) {
   :root {
-    --header-height: 88px;
+    --header-height: 82px;
   }
 
   .site-header {
@@ -274,21 +301,19 @@ button {
 
   .site-title {
     top: 27px;
-    left: 24px;
+    left: 22px;
     transform: none;
-    font-size: 24px;
+    font-size: 23px;
   }
 
   .language-switch {
-    top: 35px;
-    right: 22px;
-    font-size: 12px;
+    top: 31px;
+    right: 76px;
+    font-size: 13px;
   }
 
   .menu-button {
     display: block;
-    left: auto;
-    right: 92px;
   }
 
   .sidebar {
@@ -296,7 +321,7 @@ button {
     left: 0;
     width: 100%;
     height: calc(100vh - var(--header-height));
-    padding: 38px 28px;
+    padding: 38px 27px;
     border-right: 0;
     transform: translateX(-105%);
     transition: transform 0.25s ease;
@@ -307,11 +332,11 @@ button {
   }
 
   .main-navigation {
-    gap: 26px;
+    gap: 25px;
   }
 
   .main-navigation a {
-    font-size: 23px;
+    font-size: 22px;
     font-weight: 600;
   }
 
@@ -321,30 +346,44 @@ button {
   }
 
   .content {
-    padding-top: 58px;
+    padding-top: 47px;
   }
 
   .intro {
-    margin-bottom: 85px;
+    margin-bottom: 76px;
   }
 
-  .intro-text {
-    font-size: clamp(38px, 11vw, 58px);
-    line-height: 1.03;
+  .intro-title {
+    margin-bottom: 27px;
+    font-size: clamp(50px, 16vw, 76px);
+    line-height: 0.95;
+  }
+
+  .intro-lead {
+    margin-bottom: 11px;
+    font-size: 21px;
+    line-height: 1.45;
+  }
+
+  .intro-main {
+    margin-bottom: 25px;
+    font-size: 21px;
+    line-height: 1.48;
+  }
+
+  .intro-sub {
+    font-size: 18px;
+    line-height: 1.55;
   }
 
   .section-title {
-    margin-bottom: 30px;
-    font-size: 13px;
-    letter-spacing: 0.22em;
+    margin-bottom: 28px;
+    font-size: 12px;
+    letter-spacing: 0.2em;
   }
 
   .works-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .image-placeholder {
-    aspect-ratio: 4 / 5;
+    gap: 28px;
   }
 }
