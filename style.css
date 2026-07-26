@@ -51,13 +51,13 @@ button {
 
 .site-title {
   position: absolute;
-  top: 25px;
+  top: 23px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 33px;
+  font-size: 40px;
   font-weight: 800;
   line-height: 1;
-  letter-spacing: -1.5px;
+  letter-spacing: -1.8px;
   text-transform: lowercase;
 }
 
@@ -92,7 +92,8 @@ button {
 }
 
 .language-divider {
-  color: #cccccc;
+  color: #bdbdbd;
+  font-weight: 400;
 }
 
 /* LINKE NAVIGATION */
@@ -355,10 +356,11 @@ button {
   }
 
   .site-title {
-    top: 27px;
+    top: 26px;
     left: 22px;
     transform: none;
-    font-size: 25px;
+    font-size: 29px;
+    letter-spacing: -1.2px;
   }
 
   .header-controls {
