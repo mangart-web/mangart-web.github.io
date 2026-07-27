@@ -75,15 +75,22 @@ button {
   text-indent: 0.13em;
 }
 
-.site-logo-japanese {
-    position: static !important;
-    display: block;
-    width: 100%;
-    margin-left: -6px !important;
-    margin-right: 0 !important;
-    text-align: center;
-    transform: none !important;
-    align-self: center;
+.site-logo .site-logo-japanese {
+  position: static !important;
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  color: var(--red) !important;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.28em;
+  text-align: center;
+  text-indent: 0.28em;
+  transform: none !important;
+  align-self: center;
 }
 
 .header-controls {
@@ -397,16 +404,21 @@ button {
     text-indent: 0;
   }
 
-  .site-logo-japanese {
+  .site-logo .site-logo-japanese {
     display: block;
     width: auto;
     margin-top: 7px;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    color: var(--red) !important;
     font-size: 14px;
     font-weight: 500;
     line-height: 1;
     letter-spacing: 0.2em;
     text-align: center;
     text-indent: 0.2em;
+    transform: translateX(-6px) !important;
+    align-self: center;
   }
 
   .header-controls {
