@@ -76,16 +76,14 @@ button {
 }
 
 .site-logo-japanese {
-  display: block;
-  width: 100%;
-  margin-top: 8px;
-  color: var(--red);
-  font-size: 30px;
-  font-weight: 500;
-  line-height: 1;
-  letter-spacing: 0.22em;
-  text-align: center;
-  text-indent: 0.00em;
+    position: static !important;
+    display: block;
+    width: 100%;
+    margin-left: -6px !important;
+    margin-right: 0 !important;
+    text-align: center;
+    transform: none !important;
+    align-self: center;
 }
 
 .header-controls {
