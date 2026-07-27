@@ -83,13 +83,13 @@ button {
   margin-right: 0 !important;
   margin-left: 0 !important;
   color: var(--red) !important;
-  font-size: 25px;
+  font-size: 29px;
   font-weight: 600;
   line-height: 1;
-  letter-spacing: 0.38em;
+  letter-spacing: 0.46em;
   text-align: center;
-  text-indent: 0.38em;
-  transform: none !important;
+  text-indent: 0.46em;
+  transform: translateX(-8px) !important;
   align-self: center;
 }
 
