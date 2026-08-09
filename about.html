@@ -15,6 +15,42 @@
   >
 
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .privacy-footer-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #999999;
+      font-size: 11px;
+      line-height: 1.8;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+    }
+
+    .privacy-footer-link:hover {
+      color: #111111;
+    }
+
+    .mobile-privacy-footer {
+      display: none;
+    }
+
+    @media (max-width: 760px) {
+      .mobile-privacy-footer {
+        display: block;
+        margin-top: 60px;
+        padding-top: 24px;
+        border-top: 1px solid #e4e4e4;
+      }
+
+      .mobile-privacy-footer a {
+        color: #999999;
+        font-size: 11px;
+        letter-spacing: 0.03em;
+        text-decoration: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -87,7 +123,9 @@
 
     <nav class="main-navigation">
 
-      <a href="index.html" data-de="Home" data-en="Home">Home</a>
+      <a href="index.html" data-de="Home" data-en="Home">
+        Home
+      </a>
 
       <a href="works.html" data-de="Werke" data-en="Works">
         Werke
@@ -126,8 +164,17 @@
 
     <div class="sidebar-footer">
       <div class="japanese-name">バッドマン</div>
-      <div>© 2026 mangart</div>
-      <div>Bruce Payne</div>
+      <div>© 2026 Mangart</div>
+      <div>BADMAN</div>
+
+      <a
+        class="privacy-footer-link"
+        href="privacy.html"
+        data-de="Datenschutz"
+        data-en="Privacy"
+      >
+        Datenschutz
+      </a>
     </div>
 
   </aside>
@@ -150,7 +197,9 @@
         <div style="margin-bottom: 54px;">
 
           <p class="intro-sub">
-            <strong data-de="Name:" data-en="Name:">Name:</strong>
+            <strong data-de="Name:" data-en="Name:">
+              Name:
+            </strong>
             Bruce Payne
           </p>
 
@@ -284,6 +333,16 @@
         </blockquote>
 
       </section>
+
+      <div class="mobile-privacy-footer">
+        <a
+          href="privacy.html"
+          data-de="Datenschutz"
+          data-en="Privacy"
+        >
+          Datenschutz
+        </a>
+      </div>
 
     </div>
 
